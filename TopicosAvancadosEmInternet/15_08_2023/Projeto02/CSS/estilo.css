@@ -20,9 +20,29 @@ body{
 @media screen and (max-width: 600px)
 {
     .um{
-        background: #f9c;
+        background: #f9C;
     }
     .span .lt600{
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 900px)
+{
+    .dois{
+        background: #F90;
+    }
+    .span .gt900{
+        display: inline-block;
+    }
+}
+
+@media screen and ( (min-width: 600px) and (max-width: 900px))
+{
+    .tres{
+        background: #9CF;
+    }
+    .span .bt600-900{
         display: inline-block;
     }
 }
