@@ -22,7 +22,7 @@ body{
     .um{
         background: #f9C;
     }
-    .span .lt600{
+    span.lt600{
         display: inline-block;
     }
 }
@@ -32,17 +32,17 @@ body{
     .dois{
         background: #F90;
     }
-    .span .gt900{
+    span.gt900{
         display: inline-block;
     }
 }
 
-@media screen and ( (min-width: 600px) and (max-width: 900px))
+@media screen and (min-width: 600px) and (max-width: 900px)
 {
     .tres{
         background: #9CF;
     }
-    .span .bt600-900{
+    span.bt600-900{
         display: inline-block;
     }
 }
