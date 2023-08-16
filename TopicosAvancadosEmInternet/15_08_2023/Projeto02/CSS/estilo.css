@@ -47,3 +47,11 @@ body{
     }
 }
 
+/*max device width*/
+@media screen and (max-device-width: 480px)
+{
+    .iphone{
+        background: #ccc;
+    }
+}
+
