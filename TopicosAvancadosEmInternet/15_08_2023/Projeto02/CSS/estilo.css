@@ -15,6 +15,18 @@ body{
     color: #666;
 }
 
+.caixa-image{
+    width: 900px;
+    height: 600px;
+    margin: 2px red;
+    text-align: center;
+}
+#image {
+    padding: 5px;
+    margin: 10px;
+    width: 450px;
+    height: 300px;
+}
 /* max-width 600px */
 
 @media screen and (max-width: 600px)
@@ -22,6 +34,7 @@ body{
     .um{
         background: #f9C;
     }
+
     span.lt600{
         display: inline-block;
     }
@@ -54,4 +67,5 @@ body{
         background: #ccc;
     }
 }
+
 
