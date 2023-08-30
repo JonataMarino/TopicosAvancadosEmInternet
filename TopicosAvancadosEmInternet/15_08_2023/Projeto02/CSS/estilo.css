@@ -16,16 +16,18 @@ body{
 }
 
 .caixa-image{
+    display: block;
     width: 900px;
     height: 600px;
     margin: 2px red;
-    text-align: center;
+    align-items: center;
 }
 #image {
     padding: 5px;
     margin: 10px;
-    width: 450px;
-    height: 300px;
+    width: 750px;
+    height: 425px;
+    align-items: center;
 }
 /* max-width 600px */
 
@@ -38,6 +40,11 @@ body{
     span.lt600{
         display: inline-block;
     }
+    #image{
+        width: 350px;
+    height: 175px;
+    align-items: center;
+    }
 }
 
 @media screen and (min-width: 900px)
@@ -48,6 +55,13 @@ body{
     span.gt900{
         display: inline-block;
     }
+    
+    #image{
+        width: 750px;
+        height: 425px;
+        align-items: center;
+
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px)
@@ -57,6 +71,11 @@ body{
     }
     span.bt600-900{
         display: inline-block;
+    }
+    #image{
+    width: 450px;
+    height: 275px;
+    align-items: center;
     }
 }
 
