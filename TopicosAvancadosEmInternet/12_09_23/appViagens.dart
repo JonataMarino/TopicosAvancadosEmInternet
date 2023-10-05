@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(AppViagens());
+  runApp(MyApp());
 }
 
-class AppViagens extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,49 +27,41 @@ class AppViagens extends StatelessWidget {
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black)),
-                              Text('Rio Grande do Norte - Brasil',
+                              Text('Rio Grande do Norte - RN',
                                   style: TextStyle(
                                       fontSize: 16, color: Colors.grey))
                             ])),
                         Row(children: [
                           Icon(Icons.star, color: Colors.yellow),
-                          Text('Mais  visto na última hora')
+                          Text('Mais visto hoje')
                         ]),
                       ],
                     )),
                 Container(
                     padding: EdgeInsets.all(20),
-                    child: Row(
-                      children: [
-                        Expanded(
-                            child: TextButton(
-                                onPressed: () {},
-                                child: Column(children: [
-                                  Icon(Icons.call, color: Colors.blue),
-                                  Text('Ligar')
-                                ]))),
-                        Expanded(
-                            child: TextButton(
-                                onPressed: () {},
-                                child: Column(children: [
-                                  Icon(Icons.location_on, color: Colors.blue),
-                                  Text('Mapa')
-                                ]))),
-                      ],
-                    )),
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: TextButton(
-                              onPressed: () {}
-                              child: Column (children: [
+                    child: Row(children: [
+                      Expanded(
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Column(children: [
+                                Icon(Icons.call, color: Colors.blue),
+                                Text('Ligar')
+                              ]))),
+                      Expanded(
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Column(children: [
+                                Icon(Icons.location_on, color: Colors.blue),
+                                Text('Mapa')
+                              ]))),
+                      Expanded(
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Column(children: [
                                 Icon(Icons.share, color: Colors.blue),
                                 Text('Compartilhar')
-                              ]))),
-                        ],
-                      )),
+                              ])))
+                    ])),
                 Container(
                     padding: EdgeInsets.all(20),
                     child: Text(
