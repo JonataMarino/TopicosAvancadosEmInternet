@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enviar Dados</title>
+</head>
+<body>
+    <h1>Envie seus Dados</h1>
+    <form id="meuForm">
+        <input type="text" id="nome" placeholder="Nome" required><br><br>
+        <input type="email" id="email" placeholder="Email" required><br><br>
+        <input type="telefone" id="telefone" placeholder="telefone" required><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('meuForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+
+            const data = {
+                nome: nome,
+                email: email,
+                telefone: telefone
+            };
+
+            const response = await fetch('http://localhost:3000/api/dados', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                alert('Dados enviados com sucesso!');
+            } else {
+                alert('Erro ao enviar os dados.');
+            }
+        });
+    </script>
+</body>
+</html>
