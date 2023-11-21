@@ -43,6 +43,49 @@ app.post('/api/dados', (req, res) => {
     });
 });
 
+app.put('/api/atualizar', (req, res) =>{
+    const  {codigo, nome, email, telefone} = req.body;
+    const UPDATE_DATA_QUERY = `update usuario SET nome = '${nome}', email = '${email}', telefone = '${telefone}' where codigo = ${codigo};`;
+
+    db.query(UPDATE_DATA_QUERY, (err, result) =>{
+    if(err){
+        res.status(500).send('Erro ao atualizar os dados')
+    }else{
+         res.status(200).json({message:'Dados atualizados com Sucesso'})
+    }
+    });
+});
+
+app.delete('/api/excluir/:codigo', (req, res) =>{
+
+    const codigo = req.params.codigo;
+    
+    const DELETE_DATA_QUERY = `DELETE FROM usuario WHERE codigo = ${codigo}`;
+
+    db.query(DELETE_DATA_QUERY, (err, result) =>{
+        if (err){
+            res.status(500).send('Erro ao excluir os dados');
+        }else{
+            res.status(200).json({message: 'Dados excluídos com sucesso'});
+        }
+    });
+});
+
+app.get('/api/consultar/:codigo', (req, res) =>{
+
+    const codigo = req.params.codigo;
+    
+    const SELECT_DATA_QUERY = `SELECT * FROM usuario WHERE codigo = ${codigo}`;
+
+    db.query(SELECT_DATA_QUERY, (err, result) =>{
+        if (err){
+            res.status(500).send('Erro ao consultar os dados');
+        }else{
+            res.status(200).json(result);
+        }
+    });
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
