@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon</title>
+    <title>Consulta de Pokémon</title>
 </head>
 <body>
-    <h1>Informe o nome do seu pokemon: </h1>
-    <input type="text" id="nomePokemon" placeholder="Nome do seu pokemon"><br>
-    <button type="submit">Pesquisar</button>
-    <div id="resposta">
-        <p id="nome"></p>
-    </div>
+
+    <h2>Consulta de Pokémon</h2>
+
+    
+    <label for="nomePokemon">Nome do Pokémon:</label>
+    <input type="text" id="nomePokemon" />
+    <button onclick="Consultar()">Consultar</button>
+
+    
+    <table id="tabelaPokemon" border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>
